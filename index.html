@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Пример страницы</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Верхнее меню */
+    header {
+      background-color: #2c2c2c;
+      height: 60px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      color: #fff;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Основной контент */
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .content {
+      max-width: 1024px;
+      width: 100%;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      line-height: 1.6;
+    }
+
+    /* Подвал */
+    footer {
+      background-color: #2c2c2c;
+      height: 40px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        position: absolute;
+        right: 20px;
+        top: 60px;
+        background-color: #2c2c2c;
+        width: auto;
+        display: none;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">МойСайт</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav id="nav">
+      <a href="#">О нас</a>
+      <a href="#">Башкирские песни</a>
+      <a href="#">Иностранные песни</a>
+      <a href="#">Хиты 2025</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content">
+      <p>
+        <!-- Lorem ipsum текст на 1000 слов -->
+        
+		Припев: </br>
+			Батырзар, батыр батырзар бар </br></br>
+		Куплет 1: </br>
+			Быга тиклем ондэшмэнек инде асылды тел,</br>
+			Бына мэрус фекерзе hезгэ эйтербез гел,</br>
+			Косло тулкын егеттэрзен ошо йунэлештэ,</br>
+			Хит-парадта без эле юк эзлэ бэйлэнештэ.</br></br>
+
+		Куплет 2: </br>
+			
+
+        <!-- Продолжение текста... можно сгенерировать длинный блок -->
+        <!-- Упрощённо для примера -->
+        <span>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum a ultrices quam. Nulla facilisi. Pellentesque ultricies...
+          <!-- Повтори Lorem 1000 слов по желанию -->
+        </span>
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    Казань 2025
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
